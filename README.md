@@ -1,0 +1,2 @@
+# Platforma-web
+Am decis în a elabora o platformă bazată pe o revistă universală în care se regăsesc diferite categorii precum secțiunea de Gaming, în care utilizatorul poate să aleagă din jocurile expuse ce dorește, o secțiune de Traveling în care vor fi expuse câteva oferte de vacanță precum și posibilitatea de a achiziționa una dintre acestea, secțiune de Fashion, Movies, Playlist, News și nu în ultimul rând de Health.
