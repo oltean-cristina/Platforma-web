@@ -1,0 +1,385 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+:root {
+  --primaryColor: #fff;
+  --navColor1:  #ff6666;
+  --navColor2:  #d67a7a;
+  --navColor3:  #b88a8a;
+  --navColor4:  #999999;
+  --navColor5: #85a3a3;
+  --navColor6: #70adad;
+  --navColor7: #47c2c2;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  font-family: Nunito, sans-serif;
+}
+
+/* --- Navigation Menu ------------------------------ */
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-100vw);
+}
+
+.overlay-slide-right {
+  transition: all 0.4s ease-in-out;
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-100vw);
+}
+
+/* Nav Menu Items */
+nav,
+nav ul {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
+}
+
+nav ul li {
+  height: 20%;
+  overflow: hidden;
+}
+
+nav li a {
+  position: relative;
+  top: 45%;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+}
+
+nav li a::before {
+  content: "";
+  width: 25vw;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 47.5%;
+  left: 0;
+  opacity: 0;
+}
+
+nav li a:hover::before {
+  opacity: 1;
+}
+
+nav li:nth-of-type(1) {
+  background-color: var(--navColor1);
+}
+
+nav li:nth-of-type(2) {
+  background-color: var(--navColor2);
+}
+
+nav li:nth-of-type(3) {
+  background-color: var(--navColor3);
+}
+
+nav li:nth-of-type(4) {
+  background-color: var(--navColor4);
+}
+
+nav li:nth-of-type(5) {
+  background-color: var(--navColor5);
+}
+nav li:nth-of-type(6) {
+  background-color: var(--navColor6);
+}
+nav li:nth-of-type(7) {
+  background-color: var(--navColor7);
+}
+
+/* Slide in animation with delay for each */
+.slide-in-1 {
+  animation: slide-in 0.4s linear 0.2s both;
+}
+
+.slide-in-2 {
+  animation: slide-in 0.4s linear 0.4s both;
+}
+
+.slide-in-3 {
+  animation: slide-in 0.4s linear 0.6s both;
+}
+
+.slide-in-4 {
+  animation: slide-in 0.4s linear 0.8s both;
+}
+
+.slide-in-5 {
+  animation: slide-in 0.4s linear 1s both;
+}
+.slide-in-6 {
+  animation: slide-in 0.4s linear 1.2s both;
+}
+.slide-in-7 {
+  animation: slide-in 0.4s linear 1.4s both;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Slide out animation with delay for each */
+.slide-out-1 {
+  animation: slide-out 0.3s linear 0.7s both;
+}
+
+.slide-out-2 {
+  animation: slide-out 0.3s linear 0.6s both;
+}
+
+.slide-out-3 {
+  animation: slide-out 0.3s linear 0.5s both;
+}
+
+.slide-out-4 {
+  animation: slide-out 0.3s linear 0.4s both;
+}
+
+.slide-out-5 {
+  animation: slide-out 0.3s linear 0.3s both;
+}
+.slide-out-6 {
+  animation: slide-out 0.3s linear 0.2s both;
+}
+.slide-out-7 {
+  animation: slide-out 0.3s linear 0.1s both;
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* --- Menu Bars ------------------------------------ */
+
+.menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 10;
+  display: inline;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-7px, 8px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* --- Sections ------------------------------------ */
+
+section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primaryColor);
+}
+
+
+
+section#home a {
+  position: absolute;
+  z-index: 2;
+  top: 1.5rem;
+  left: 1.5rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding-bottom: 5px;
+  color: var(--primaryColor);
+  border-bottom: 1px solid var(--primaryColor);
+}
+
+
+
+/* Media Query: Large Smartphone (Vertical) */
+@media (max-width: 600px) {
+  section#home a {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .menu-bars {
+    top: 0.5rem;
+    right: 1rem;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+	--primary-color: #3a4052;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 60px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+.showcase {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #fff;
+	padding: 0 20px;
+}
+
+.video-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: var(--primary-color) url('./https://traversymedia.com/downloads/cover.jpg') no-repeat center
+		center/cover;
+}
+
+.video-container video {
+	min-width: 100%;
+	min-height: 100%;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	object-fit: cover;
+}
+
+.video-container:after {
+	content: '';
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+}
+
+.content {
+	z-index: 2;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 30px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 5px;
+	border: solid #fff 1px;
+	margin-top: 25px;
+	opacity: 0.7;
+}
+
+.btn:hover {
+	transform: scale(0.98);
+}
+
+#about {
+	padding: 40px;
+	text-align: center;
+}
+
+#about p {
+	font-size: 1.2rem;
+	max-width: 600px;
+	margin: auto;
+}
+
+#about h2 {
+	margin: 30px 0;
+	color: var(--primary-color);
+}
+
+.social a {
+	margin: 0 5px;
+}
+

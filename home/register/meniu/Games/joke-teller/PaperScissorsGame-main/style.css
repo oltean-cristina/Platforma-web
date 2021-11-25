@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+
+html{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: #e5e5e5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239e88bf' fill-opacity='0.4'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  /* background-color: whitesmoke; */
+  min-height: 100vh;
+  font-family: Hachi Maru Pop, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-container{
+  width: 530px;
+  height: 650px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px 15px rgba(0,0,0,0.5);
+}
+.header {
+  height: 100px;
+  font-weight: bold;
+  background-color: rgb(83, 202, 241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.far{
+  font-size: 50px;
+  margin-right: 20px;
+  user-select: none;
+}
+h1 {
+  color: white;
+  font-size: 20px;
+}
+.player-container{
+ margin: 60px; 
+}
+#player .far, 
+#player #playerChoice {
+  color: rgb(33, 133, 158); 
+  cursor: pointer;
+}
+#computer .far, 
+#computer #computerChoice{
+  color: rgb(185, 91, 82);
+}
+h2 {
+  margin-bottom: 20px;
+}
+.selected {
+  color: rgb(0,0,0) !important;
+}
+.reset-icon{
+  font-size: 35px;
+  margin-left: 50px;
+}
+.result-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px){
+  .game-container {
+    width: 95%;
+    height: 580px;
+  }
+  h1{
+    font-size: 24px;
+    text-align: center;
+  }
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+  .far {
+    margin-right: 15px;
+  }
+  .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+} 
+
+@media screen and (max-width: 376px){
+  .game-container {
+    height: 550px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .player-container {
+    margin: 43px 0 25px 20px;
+  }
+  .far {
+    font-size: 43px;
+  }
+  .reset-icon {
+    margin-top: 15px;
+  }
+  .result-container {
+    margin: 0 20px;
+  }
+}
+
+
